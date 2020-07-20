@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" href="../bootstrap-3.3.4/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../Flat-UI-master/dist/css/flat-ui.min.css" />
+		<script src="../Flat-UI-master/dist/js/vendor/jquery.min.js"></script>
+		<script src="../bootstrap-3.3.4/dist/js/bootstrap.min.js"></script>
+		<script src="../Flat-UI-master/dist/js/flat-ui.min.js"></script>
+		<script>
+			$(function() {
+				$(function() {
+					$('#myTab a:last').tab('show'); //初始化显示哪个tab 
+
+					$('#myTab a').click(function(e) {
+						e.preventDefault(); //阻止a链接的跳转行为 
+						$(this).tab('show'); //显示当前选中的链接及关联的content 
+					})
+				})
+				$('#myTab a[href="#profile"]').tab('show'); // Select tab by name 
+				$('#myTab a:first').tab('show'); // Select first tab 
+				$('#myTab a:last').tab('show'); // Select last tab 
+				$('#myTab li:eq(2) a').tab('show');
+			});
+		</script>
+		<title></title>
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<!-- Static navbar -->
+		<div>
+			<div>
+				<ul class="nav nav-tabs" id="myTab">
+					<li class="active">
+						<a href="#home">Home</a>
+					</li>
+					<li>
+						<a href="#profile">Profile</a>
+					</li>
+					<li>
+						<a href="#messages">Messages</a>
+					</li>
+					<li>
+						<a href="#settings">Settings</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="home">1</div>
+					<div class="tab-pane" id="profile">2</div>
+					<div class="tab-pane" id="messages">3</div>
+					<div class="tab-pane" id="settings">4</div>
+				</div>
+			</div>
+		</div>
+		<!--content-->
+		<div class="container">
+
+		</div>
+
+		<!--footer-->
+		<div>
+
+		</div>
+	</body>
+
+</html>
