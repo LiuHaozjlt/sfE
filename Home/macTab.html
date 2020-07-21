@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery标签页Tab选项卡切换 - 站长素材</title>
+
+<link type="text/css" href="../CSS/style3.css" rel="stylesheet" />
+<style type="text/css">
+	.tabBot{
+		background-color: #f2f2f2;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.tabBot2{
+		width:100px;
+		border-radius: 10px;
+		height: 35px;
+		align-items: center;
+		background-color: #f9ae49;
+		text-align: center;
+		line-height: 35px;
+	}
+	.mt-tabpage{
+		overflow: hidden;
+	}
+	.mt-tabpage-title{
+		width:100%;
+		margin:0 !important;
+		border-color:red;
+		overflow: visible;
+		background-color: #000099;
+
+	}
+	.mt-tabpage-title .tabs{
+		display:inline-block;
+		background-color: #ccc;
+		border-radius:0px 8px 0 0 !important;
+	}
+	.mt-tabpage-title .mt-tabpage-item {
+		background-color: #ccc;
+		color:#000;
+		border-bottom:1px solid red;
+		border-radius:0px 8px 0 0 !important;
+		/*margin-right:-3px;*/
+	}
+	.mt-tabpage-title .mt-tabpage-item-cur{
+		background-color: #fff ;
+		z-index:999;
+		border-left:1px solid red;
+		border-right:1px solid red;
+		border-bottom:0px solid rgba(0,0,0,0);
+		position:relative;
+		
+	}
+	.mt-tabpage-title .mt-tabpage-item-cur::after{
+		display:inline-block;
+		content:'';
+		width:100%;
+		height:1px;
+		position:absolute;
+		left:0;
+		bottom:-1px;
+		background-color: #fff;
+	}
+</style>
+
+</head>
+<body>
+
+ 
+
+<div class="mt-tabpage" js-tab="3">
+	<div class="mt-tabpage-title">
+		<div class="tabs">
+			<a href="javascript:;" class="mt-tabpage-item mt-tabpage-item-cur">公告</a>
+		<a href="javascript:;" class="mt-tabpage-item">决定</a>
+		<a href="javascript:;" class="mt-tabpage-item">会议</a>
+		</div>
+	</div>
+	<div class="mt-tabpage-count">
+		<ul class="mt-tabpage-cont__wrap">
+			<li class="mt-tabpage-item">Cont1</li>
+			<li class="mt-tabpage-item">Cont2</li>
+			<li class="mt-tabpage-item">Cont3</li>
+		</ul>
+	</div>
+	<div class="tabBot">
+		<div  class="tabBot2"style=""> 返回</div>
+	</div>
+</div>
+
+ 
+<script type="text/javascript" src="../JS/jquery.min.js"></script>
+<script type="text/javascript" src="../JS/mt-tabpage.js"></script>
+
+
+<script type="text/javascript">
+$(function () {
+
+	$('[js-tab=2]').tab({
+		mouse: 'over',   //切换方式：over，click
+		autoPlay: true,  //播放方式：false，true
+		curDisplay: 1,     //当前第一个打开
+		changeMethod: 'horizontal'  //切换选项：默认default，horizontal，vertical，opacity这4种方式
+	});
+
+	$('[js-tab=3]').tab({
+		curDisplay: 2,
+		changeMethod: 'horizontal'
+	});
+	
+});
+</script>
+ 
+</body>
+</html>

@@ -11,11 +11,7 @@
 		<script src="../Flat-UI-master/dist/js/flat-ui.min.js"></script>
 		<title></title>
 		<style>
-			.row {
-				margin-left: 20px;
-				margin-right: 20px;
-				;
-			}
+			.thumbnail {}
 			
 			.col-sm-5 {
 				display: flex;
@@ -25,22 +21,97 @@
 				background-color: #2ECC71;
 				width: 100%;
 				height: 100vh;
+				overflow: hidden;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
-			.navhed{
+			
+			.thumbnail {
+				width: 800px;
+				height: 400px;
+			}
+			
+			.thumbnail .col-sm-6 {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			.img {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			h5 {
+				text-align: center;
+			}
+			
+			.navhed {
 				height: 50px;
 				background-color: #FAFAFA;
-				width:100%;
+				width: 100%;
 			}
-			.centers{
+			
+			form {
+				overflow: hidden;
+				padding: 0 !important;
+			}
+			
+			.form-group {
+				position: relative;
 				display: flex;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+				width: 100%;
+				margin: 0 0 20px 0 !important;
 			}
-			.keyb{
-				width:20px;
+			
+			input {
+				display: inline-block;
+				width: 100%;
+				box-sizing: border-box;
+				padding: 8px 40px !important;
+				box-sizing: border-box;
+			}
+			
+			.form-group .img-box,
+			.form-group .keyb {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			
+			.form-group .img-box {
+				left: 0;
+				width: 35px;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-right: 1px solid #ccc;
+			}
+			
+			.keyb {
+				width: 20px;
 				height: 20px;
+				right: 10px;
 			}
-			.pas{
-				width:35px;
-				height: 35px;
+			
+			.pas {
+				width: 22px;
+				height: 22px;
+				padding: 0px !important;
+			}
+			
+			.btn-box {
+				justify-content: space-between;
+			}
+			
+			.btn-box button {
+				margin: 0 !important;
+				width: 120px;
 			}
 		</style>
 	</head>
@@ -51,50 +122,47 @@
 			<a class="navbar-brand" href="Index.html">logo图标</a>
 		</div>
 		<div class=" ">
-			
-		 
-			 <div class="container2">
+
+			<div class="container2">
 				<div class="row thumbnail center centers">
-					
-					<div class="col-sm-12">
-						<img src="../IMG/Loy.png"/>
+
+					<div class="col-sm-6 img">
+						<img src="../IMG/Loy.png" />
 					</div>
 					<div class="col-sm-6">
 						<h5>现场管理系统</h5>
 						<label>请输入账号密码</label>
 						<form class="form-horizontal caption">
 							<div class="form-group">
-								<div class="col-sm-8">
+								<div class="img-box">
 									<span class="glyphicon glyphicon-user"></span>
-									<input type="text" class="form-control" id="username" placeholder="用户名">
-									<img src="../IMG/keyb.png" class="keyb"/>
 								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<img src="../IMG/pas.png" class="pas"/>
-								</div>
-								<div class="col-sm-8">
-									<span class="fa fa-unlock-alt fa-2x form-control-feedback"></span>
-									<input type="password" class="form-control" id="password" placeholder="密码">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-offset-3 col-sm-9">
 
-								</div>
+								<input type="text" class="form-control" id="username" placeholder="用户名">
+								<img src="../IMG/keyb.png" class="keyb" />
+
 							</div>
 							<div class="form-group">
-								<div class="col-sm-offset-3 col-sm-5">
-									<button type="submit" class="btn btn-success btn-block">登录</button>
-									<button type="submit" class="btn btn-success btn-block">重置</button>
-									<button type="submit" class="btn btn-success btn-block">选择机台</button>
+								<div class="img-box">
+									<img src="../IMG/pas.png" class="pas" />
 								</div>
+
+								<!--<span class="fa fa-unlock-alt fa-2x form-control-feedback"></span>-->
+								<input type="password" class="form-control" id="password" placeholder="密码">
+
+							</div>
+
+							<div class="form-group btn-box">
+
+								<button type="submit" class="btn btn-success btn-block">登录</button>
+								<button type="submit" class="btn btn-success btn-block">重置</button>
+								<button type="submit" class="btn btn-success btn-block">选择机台</button>
+
 							</div>
 						</form>
 					</div>
 				</div>
-			</div> 
+			</div>
 
 			<!--footer-->
 			<div class=" ">

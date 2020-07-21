@@ -1,139 +1,127 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="../bootstrap-3.3.4/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../Flat-UI-master/dist/css/flat-ui.min.css"/>
-    <script src="../Flat-UI-master/dist/js/vendor/jquery.min.js"></script>
-    <script src="../bootstrap-3.3.4/dist/js/bootstrap.min.js"></script>
-    <script src="../Flat-UI-master/dist/js/flat-ui.min.js"></script>
-    <title></title>
-    <style>
-        .row{
-            margin-left: 20px;
-            margin-right: 20px;;
-        }
-        .line-center{
-            line-height:50px;
-            text-align: center;
-        }
-        .row input{
-            width: 50px;
-        }
-        .list-group-item:hover{
-            background: #27ae60;
+	<head lang="en">
+		<meta charset="UTF-8">
 
-        }
-        .list-group-item div:first-child:hover{
+		<link rel="stylesheet" href="../bootstrap-3.3.4/dist/css/bootstrap.min.css" />
+		<!-- CSS 部分 -->
+		<!-- Bootstrap 3.3.7 -->
+		<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+		<!-- Bootstrap table -->
+		<!--<link rel="stylesheet" href="/bootstrap-table/dist/css/booststrap-table.min.css">-->
+		<!--<script src="../bootstrap-3.3.4/dist/js/bootstrap.min.js"></script>-->
+		<link rel="stylesheet" href="../CSS/bootstrap-table.css" />
 
-            cursor: pointer;
-        }
-    </style>
-    <script>
-        function myClick(n){
-           location.href = "OrderInfo.html";
-        }
-        function btnClick(){
-            alert("btn");
-            return false;
-        }
-        $(function(){
+		<title></title>
+		<style>
+			.container {
+				width: 900px;
+				margin: 0 auto;
+				background-color: blue;
+			}
+			
+			.container {
+				background-color: #fff;
+			}
+			
+			.titleCon {
+				height: 50px;
+				text-align: center;
+				background-color: #F2DEDE;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			
+			.cLosCon {
+				width: 30px;
+				height: 30px;
+			}
+			
+			.table-title {
+				display: flex;
+				justify-content: space-between;
+				line-height: 50px;
+			}
+			
+			.table-title-con {
+				display: flex;
+				justify-content: space-around;
+				width: 50%;
+				height: 50px;
+				line-height: 50px;
+			}
+		</style>
 
-        })
-    </script>
-</head>
-<body>
-<!-- Static navbar -->
-<div class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">这什么东西</span>
-            </button>
-            <a class="navbar-brand" href="Index.html">图书商城</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="Index.html">首页</a></li>
-                <li><a href="Order.html">我的订单</a></li>
-                <li><a href="UserInfo.html">个人中心</a></li>
-                <li><a href="FriendLink.html">友情链接</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right hidden-sm">
-                <li><a href="Login.html">登录</a></li>
-                <li><a href="Register.html">注册</a></li>
-                <li>
-                    <a href="Cart.html"><span class="glyphicon glyphicon-shopping-cart">购物车</span></a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</div>
-<!--content-->
-<div class="container">
-    <div class="row thumbnail center">
-        <div class="col-sm-12">
-            <h1 class="text-center" style="margin-bottom: 30px">我的订单</h1>
-        </div>
-        <div class="col-sm-12 thumbnail">
-            <div class="col-sm-3 line-center">订单编号</div>
-            <div class="col-sm-2 line-center">订单状态</div>
-            <div class="col-sm-2 line-center">商品数量 </div>
-            <div class="col-sm-2 line-center">订单总价</div>
-            <div class="col-sm-3 line-center">操作</div>
-        </div>
-        <div class="list-group">
-            <div class="col-sm-12  list-group-item" >
-                <div class="col-sm-3 line-center" onclick="myClick(1)">ahiudsfhjk-23423-23asd-12</div>
-                <div class="col-sm-2 line-center">未付款</div>
-                <div class="col-sm-2 line-center">12 </div>
-                <div class="col-sm-2 line-center">1231.00元</div>
-                <div class="col-sm-3 line-center">
-                    <button class="btn btn-danger">删除订单</button>
-                    <button class="btn btn-success">提交订单</button>
+	</head>
 
-                </div>
-            </div>
-            <div class="col-sm-12  list-group-item" >
-                <div class="col-sm-3 line-center" onclick="myClick(2)">ahiudsfhjk-23423-23asd-12</div>
-                <div class="col-sm-2 line-center">未付款</div>
-                <div class="col-sm-2 line-center">12 </div>
-                <div class="col-sm-2 line-center">1231.00元</div>
-                <div class="col-sm-3 line-center">
-                    <button class="btn btn-danger">删除订单</button>
-                    <button class="btn btn-success">提交订单</button>
+	<body>
+		<!-- Static navbar -->
+		<div class="container">
+			<div class="titleCon">
+				<span></span> 操作工过程点检
+				<img src="../IMG/cLos.png" class="cLosCon" />
+			</div>
+			<div class="table-box">
+				<div class="table-title">
+					<div class="table-title-con">
+						<span>机台：1111</span>
+						<span>班组：1111</span>
+						<span>班次：1111</span>
+					</div>
+					<span class="time">2020.07.11 11：00：00</span>
+				</div>
+				<table id="table"></table>
+			</div>
+		</div>
+		<!--footer-->
+		<!-- JS 部分 -->
+		<!-- jQuery 3 -->
+		<script src="../JS/jquery.min.js"></script>
+		<!-- Bootstrap 3.3.7 -->
+		<script src="../bootstrap-3.3.4/dist/js/bootstrap.min.js"></script>
 
-                </div>
-            </div>
-            <div class="col-sm-12  list-group-item" >
-                <div class="col-sm-3 line-center" onclick="myClick(3)">ahiudsfhjk-23423-23asd-12</div>
-                <div class="col-sm-2 line-center">未付款</div>
-                <div class="col-sm-2 line-center">12 </div>
-                <div class="col-sm-2 line-center">1231.00元</div>
-                <div class="col-sm-3 line-center">
-                    <button class="btn btn-danger">删除订单</button>
-                    <button class="btn btn-success">提交订单</button>
+		<!-- bootstrap-table -->
+		<!--<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css">-->
+		<!--<script src="../bootstrap/"></script>-->
+		<script src="../JS/bootstrap-table.js"></script>
+		<script src="../JS/bootstrap-table-zh-CN.min.js"></script>
+		<script>
+			function loading() {
 
-                </div>
-            </div>
-            <div class="col-sm-12  list-group-item" >
-                <div class="col-sm-3 line-center" onclick="myClick(4)">ahiudsfhjk-23423-23asd-12</div>
-                <div class="col-sm-2 line-center">未付款</div>
-                <div class="col-sm-2 line-center">12 </div>
-                <div class="col-sm-2 line-center">1231.00元</div>
-                <div class="col-sm-3 line-center">
-                    <button class="btn btn-danger">删除订单</button>
-                    <button class="btn btn-success">提交订单</button>
-                </div>
-            </div>
+				$.ajax({
+					url: "http://localhost/json.php?name=‘zhangsan‘&age=12",
+					url: "https://api.apiopen.top/musicRankings",
+					type: "post",
+					data: {
+						name: "李四",
+						age: 28
+					},
+					dataType: "json",
+					success: function(data) {
+						//						JQuery中吧JSON字符串转成JSON对象
+						var jsons = $.parseJSON(data);
+						console.log(data);
+					},
+					error: function() {
+						alert("请求失败啦！");
+					},
+					statusCode: {
+						"404": function() {
+							alert("404表示页面没有找到");
+						},
+						"500": function() {
+							alert("500表示服务器内部错误");
+						},
+						"200": function() {
+							alert("200表示请求成功");
+						}
+					}
+				});
+			}
+			//			loading()
+		</script>
+	</body>
 
-    </div>
-</div>
-
-
-<!--footer-->
-<div class="navbar navbar-default navbar-static-bottom">
-    版权声明区
-</div>
-</body>
 </html>

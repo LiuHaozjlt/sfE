@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>jQuery抖动导航菜单 - 站长素材</title>
+		<style type="text/css">
+			body {
+				background-color: #F8F8FF;
+			}
+			
+			#demo,
+			#demo *,
+			#footer,
+			#footer * {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#demo,
+			#footer {
+				width: 70%;
+				margin: 1em auto;
+				font: normal 1em/1.4em 微软雅黑;
+			}
+			
+			#demo ul {
+				list-style: none;
+				overflow: hidden;
+				background-color: rgb(241, 241, 241);
+				padding: 1em 0;
+			}
+			
+			#demo ul li {
+				float: left;
+				width: 10%;
+				text-align: center;
+				cursor: pointer;
+				padding: .3em 0;
+				color: #262626;
+			}
+			
+			#demo ul li:hover {
+				background-color: #D4D4D4;
+			}
+			
+			#msg {
+				font-size: 1.2em;
+				text-align: center;
+				margin: 2em 0;
+			}
+			
+			#footer {
+				font-size: .8em;
+			}
+			
+			#footer p {
+				margin: .3em 0;
+			}
+			
+			#footer a {
+				color: rgb(126, 34, 34);
+				text-decoration: none;
+			}
+			
+			#footer a:hover {
+				text-decoration: underline;
+			}
+			
+			#footer a:visited {
+				color: rgb(187, 166, 166);
+			}
+			
+			.img-c {
+				width: 20px;
+				height: 20px;
+			}
+		</style>
+		<script src="../JS/jquery.min.js" type="text/javascript"></script>
+		<script src="../JS/jquery.shake.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<!-- 代码 开始 -->
+		<div id="demo">
+			<ul>
+				<li>
+					<img class="img-c" src="../IMG/wallhaven-450073.png" />首页</li>
+				<li><img class="img-c" src="../IMG/wallhaven-450073.png" />第2栏</li>
+				<li><img class="img-c" src="../IMG/wallhaven-450073.png" />第6栏</li>
+				<li><img class="img-c" src="../IMG/wallhaven-450073.png" />第4栏</li>
+
+			</ul>
+			<ul>
+				<li><img class="img-c" src="../IMG/wallhaven-450073.png" />首页</li>
+				<li><img class="img-c" src="../IMG/wallhaven-450073.png" />第2栏</li>
+				<li><img class="img-c" src="../IMG/wallhaven-450073.png" />第6栏</li>
+				<li><img class="img-c" src="../IMG/wallhaven-450073.png" />第4栏</li>
+
+			</ul>
+
+		</div>
+		<div id="demo">
+			<ul>
+				<li><img class="img-c" src="../IMG/wallhaven-450073.png" />首页</li>
+				<li><img class="img-c" src="../IMG/wallhaven-450073.png" />第2栏</li>
+				<li><img class="img-c" src="../IMG/wallhaven-450073.png" />第6栏</li>
+				<li><img class="img-c" src="../IMG/wallhaven-450073.png" />第4栏</li>
+
+			</ul>
+
+		</div>
+		<script type="text/javascript">
+			$('#demo li').shake();
+		</script>
+		<!-- 代码 结束 -->
+
+	</body>
+
+</html>

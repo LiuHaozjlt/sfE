@@ -41,11 +41,14 @@ body {
 
 .imenu a {
 	color: #FFF;
-	text-decoration: none
+	text-decoration: none;
+	display:inline-block;
+	width:100%;
+	height:100%;
 }
 
 .imenu a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .imenu_on {
@@ -72,11 +75,18 @@ body {
 	color: #015d22;
 	text-decoration: underline;
 }
+.active{
+	background-color: #fff;
+	color:#000;
+}
+
 
 .submnu {
+	color:#000;
 	width: 915px;
 	*width: 915px;
 	_width: 915px;
+	height:300px;
 	border-top: none;
 	margin: 0 auto;
 	display: none;
